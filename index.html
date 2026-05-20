@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Bureau of Tiny Emergencies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Bureau home">
+        <span class="brand-mark">!</span>
+        <span>Bureau of Tiny Emergencies</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#excuse">Excuse Desk</a>
+        <a href="#forecast">Forecast</a>
+        <a href="#complaints">Complaints</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Government-grade nonsense</p>
+        <h1>We handle problems too small for therapy.</h1>
+        <p class="hero-copy">
+          Late to a meeting? Forgot why you opened the fridge? Accidentally
+          replied “you too” to a dentist? File your tiny emergency here.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#excuse">Generate an excuse</a>
+          <button class="button secondary" id="panicButton" type="button">
+            Press if mildly inconvenienced
+          </button>
+        </div>
+        <p class="panic-readout" id="panicReadout">
+          Current panic level: decorative.
+        </p>
+      </section>
+
+      <section class="stats" aria-label="Official bureau statistics">
+        <article>
+          <strong>14</strong>
+          <span>Meetings escaped by “Wi-Fi fog”</span>
+        </article>
+        <article>
+          <strong>0</strong>
+          <span>Lessons learned, per policy</span>
+        </article>
+        <article>
+          <strong>∞</strong>
+          <span>Tabs open for emotional support</span>
+        </article>
+      </section>
+
+      <section id="excuse" class="section lab">
+        <div>
+          <p class="eyebrow">Excuse Desk</p>
+          <h2>Submit your tiny crisis.</h2>
+          <p>
+            The bureau will convert your situation into a polished explanation
+            that sounds accountable while avoiding all measurable accountability.
+          </p>
+        </div>
+
+        <form class="panel" id="excuseForm">
+          <label for="problem">What went wrong?</label>
+          <textarea
+            id="problem"
+            name="problem"
+            rows="4"
+            placeholder="Example: I joined the meeting and immediately forgot every word I know"
+          ></textarea>
+
+          <fieldset>
+            <legend>Choose your official tone</legend>
+            <label>
+              <input type="radio" name="tone" value="corporate" checked />
+              Corporate fog
+            </label>
+            <label>
+              <input type="radio" name="tone" value="dramatic" />
+              Dramatic
+            </label>
+            <label>
+              <input type="radio" name="tone" value="suspicious" />
+              Suspiciously calm
+            </label>
+          </fieldset>
+
+          <button class="button primary" type="submit">File the paperwork</button>
+        </form>
+      </section>
+
+      <section class="memo-card" aria-live="polite">
+        <div class="memo-stamp">Approved-ish</div>
+        <p class="eyebrow">Official Memo</p>
+        <h2 id="memoTitle">Your excuse is pending bureaucracy.</h2>
+        <p id="memoBody">
+          Tell us what happened. We’ll turn it into something that sounds like it
+          passed through seven departments and one haunted printer.
+        </p>
+        <ul id="memoList">
+          <li>Root cause: unknown, but probably calendar-related.</li>
+          <li>Action item: nod thoughtfully.</li>
+          <li>Recommended snack: anything eaten over the sink.</li>
+        </ul>
+      </section>
+
+      <section id="forecast" class="section forecast">
+        <div class="section-heading">
+          <p class="eyebrow">Today’s Forecast</p>
+          <h2>Mostly awkward with a chance of pretending to reboot.</h2>
+        </div>
+        <div class="forecast-grid">
+          <article class="forecast-card">
+            <span>9:00 AM</span>
+            <strong>Inbox drizzle</strong>
+            <p>Carry a small umbrella for emails that begin “quick question.”</p>
+          </article>
+          <article class="forecast-card">
+            <span>1:00 PM</span>
+            <strong>Meeting thunder</strong>
+            <p>High probability of saying “makes sense” before understanding.</p>
+          </article>
+          <article class="forecast-card">
+            <span>4:59 PM</span>
+            <strong>Urgent sparkle</strong>
+            <p>A task becomes urgent exactly when your brain puts on pajamas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="remotion-box">
+        <div>
+          <p class="eyebrow">Remotion Reel</p>
+          <h2>The bureau now has six tiny emergency broadcasts.</h2>
+          <p>
+            I added six Remotion-rendered videos that match the site’s
+            bureaucratic nonsense energy: PSAs, forecasts, snack policies, tab
+            counseling, and other extremely official nonsense.
+          </p>
+          <code>npm run remotion</code>
+        </div>
+        <div class="video-grid">
+          <article>
+            <video
+              src="out/tiny-emergency-ad.mp4"
+              poster="out/tiny-emergency-still.jpeg"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+            <strong>Public Service Announcement</strong>
+          </article>
+          <article>
+            <video
+              src="out/panic-forecast.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+            <strong>Panic Forecast</strong>
+          </article>
+          <article>
+            <video
+              src="out/complaint-receipt.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+            <strong>Complaint Receipt</strong>
+          </article>
+          <article>
+            <video
+              src="out/meeting-escape-plan.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+            <strong>Meeting Escape Plan</strong>
+          </article>
+          <article>
+            <video
+              src="out/snack-protocol.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+            <strong>Snack Protocol</strong>
+          </article>
+          <article>
+            <video
+              src="out/tab-therapy.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+            <strong>Tab Therapy</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="complaints" class="complaint-box">
+        <p class="eyebrow">Complaints Department</p>
+        <h2>We take feedback seriously for up to four seconds.</h2>
+        <button class="button secondary" id="complaintButton" type="button">
+          Register complaint
+        </button>
+        <p id="complaintReadout">
+          No complaints registered. Suspicious, but convenient.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>Built locally. Certified nonsense. No refunds because it was free.</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

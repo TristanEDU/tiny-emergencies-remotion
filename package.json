@@ -1,0 +1,29 @@
+{
+  "name": "tiny-emergencies-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A funny localhost site plus a Remotion promo video.",
+  "scripts": {
+    "site": "python3 -m http.server 5173",
+    "remotion": "remotion studio src/index.ts",
+    "compositions": "remotion compositions src/index.ts",
+    "still": "remotion still src/index.ts TinyEmergencyAd --frame=45 --scale=0.25 out/tiny-emergency-still.jpeg",
+    "render": "remotion render src/index.ts TinyEmergencyAd out/tiny-emergency-ad.mp4",
+    "render:forecast": "remotion render src/index.ts PanicForecast out/panic-forecast.mp4",
+    "render:complaint": "remotion render src/index.ts ComplaintReceipt out/complaint-receipt.mp4",
+    "render:meeting": "remotion render src/index.ts MeetingEscapePlan out/meeting-escape-plan.mp4",
+    "render:snack": "remotion render src/index.ts SnackProtocol out/snack-protocol.mp4",
+    "render:tabs": "remotion render src/index.ts TabTherapy out/tab-therapy.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.368",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "remotion": "^4.0.368"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "typescript": "^5.9.2"
+  }
+}
