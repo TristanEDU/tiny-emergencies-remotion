@@ -60,7 +60,22 @@ const assertExists = (filePath) => {
 
 const pick = (items) => items[Math.floor(Math.random() * items.length)];
 
+const assertSupportedNode = () => {
+  const major = Number(process.versions.node.split(".")[0]);
+  if (Number.isNaN(major)) return;
+
+  // GitHub Actions pins Node 20. Remotion tooling tends to lag the very latest Node majors,
+  // and unsupported majors can manifest as hard-to-debug browser crashes (SIGABRT).
+  if (major > 22) {
+    throw new Error(
+      `Unsupported Node.js version v${process.versions.node}. Use Node 20 (CI) or <=22 for local runs.`,
+    );
+  }
+};
+
 const main = () => {
+  assertSupportedNode();
+
   // Phase A: Daily dispatch (must succeed or fail loudly)
   const timeZone = process.env.TIMEZONE || DEFAULT_TZ;
   const now = new Date();
@@ -122,4 +137,3 @@ const main = () => {
 };
 
 main();
-

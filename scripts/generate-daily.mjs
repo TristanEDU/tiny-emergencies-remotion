@@ -1,6 +1,7 @@
 import { spawnSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs";
+import net from "node:net";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -223,6 +224,91 @@ const run = (command, args, options = {}) => {
   }
 };
 
+const getAvailablePort = (preferredPort) =>
+  new Promise((resolve, reject) => {
+    const server = net.createServer();
+
+    server.once("error", (error) => {
+      if (error.code === "EADDRINUSE" && preferredPort < 65535) {
+        getAvailablePort(preferredPort + 1).then(resolve, reject);
+        return;
+      }
+
+      reject(error);
+    });
+
+    server.once("listening", () => {
+      const address = server.address();
+      const port = typeof address === "object" && address ? address.port : preferredPort;
+      server.close(() => resolve(port));
+    });
+
+    server.listen(preferredPort, "127.0.0.1");
+  });
+
+const findBrowserExecutable = () => {
+  const fromEnv = process.env.BROWSER_EXECUTABLE;
+  if (fromEnv && fs.existsSync(fromEnv)) return fromEnv;
+
+  const candidates =
+    process.platform === "darwin"
+      ? [
+          "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "/Applications/Chromium.app/Contents/MacOS/Chromium",
+          "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+          "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+        ]
+      : process.platform === "win32"
+        ? []
+        : ["/usr/bin/google-chrome", "/usr/bin/chromium-browser", "/usr/bin/chromium"];
+
+  for (const candidate of candidates) {
+    if (fs.existsSync(candidate)) return candidate;
+  }
+
+  return null;
+};
+
+const renderDailyVideo = async ({ outputVideo, props }) => {
+  const browserExecutable = findBrowserExecutable();
+  const renderConcurrency = process.env.REMOTION_CONCURRENCY || "1";
+  const basePort = Number(process.env.REMOTION_PORT || "3101");
+  const attempts = Number(process.env.REMOTION_RENDER_ATTEMPTS || "2");
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    const port = await getAvailablePort(basePort + attempt - 1);
+    console.log(
+      `Rendering DailyDispatch on port ${port} (concurrency=${renderConcurrency}, attempt=${attempt}/${attempts})`,
+    );
+
+    try {
+      run("npx", [
+        "--no-install",
+        "remotion",
+        "render",
+        "src/index.ts",
+        "DailyDispatch",
+        outputVideo,
+        "--port",
+        String(port),
+        "--concurrency",
+        renderConcurrency,
+        ...(browserExecutable ? ["--browser-executable", browserExecutable] : []),
+        "--props",
+        JSON.stringify(props),
+      ]);
+      return;
+    } catch (error) {
+      lastError = error;
+      if (attempt === attempts) break;
+      console.warn(`DailyDispatch render failed on port ${port}; retrying on a fresh port.`);
+    }
+  }
+
+  throw lastError;
+};
+
 const generateAudio = ({ seconds, mood, outPath }) => {
   const frequency =
     mood === "snack" ? 330 : mood === "panic" ? 550 : mood === "tabs" ? 420 : 440;
@@ -253,7 +339,7 @@ const generateAudio = ({ seconds, mood, outPath }) => {
   ]);
 };
 
-const main = () => {
+const main = async () => {
   const timeZone = process.env.TIMEZONE || DEFAULT_TZ;
   const keepDays = Number(process.env.KEEP_DAYS || "60");
   const now = new Date();
@@ -316,16 +402,7 @@ const main = () => {
     bulletins,
   };
 
-  run("npx", [
-    "--no-install",
-    "remotion",
-    "render",
-    "src/index.ts",
-    "DailyDispatch",
-    outputVideo,
-    "--props",
-    JSON.stringify(props),
-  ]);
+  await renderDailyVideo({ outputVideo, props });
 
   fs.copyFileSync(outputVideo, latestVideo);
 
@@ -378,4 +455,7 @@ const main = () => {
   );
 };
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

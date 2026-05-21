@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-01-01",
-  "seed": 1337,
+  "dateISO": "2026-05-20",
+  "seed": 1079162637,
   "mood": "paperwork",
-  "includeSound": false,
-  "headline": "Daily dispatch pending.",
-  "subhead": "The bureau automation will publish a new dispatch here every day.",
+  "includeSound": true,
+  "headline": "A form has feelings now.",
+  "subhead": "This dispatch is legally binding in the emotional sense only.",
   "bulletins": [
-    "Your calendar is doing something suspicious.",
-    "Please stand by for paperwork.",
-    "The printer is warming up its opinions.",
-    "This section will update automatically."
+    "Your inbox is drizzling passive-aggression with a 60% chance of 'circling back.'",
+    "Reminder: sighs must be filed in triplicate.",
+    "Approval stamp deployed with theatrical confidence.",
+    "Stapler has been promoted to manager (against everyone's wishes)."
   ],
   "feature": {
-    "name": "Policy of the Day",
-    "description": "A new policy clause has been issued and immediately ignored with confidence."
+    "name": "Mood Stamp",
+    "description": "A different stamp design appears today. It does nothing, but it judges you."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-01-01T00:00:00.000Z"
+  "generatedAt": "2026-05-21T01:45:59.683Z"
 }

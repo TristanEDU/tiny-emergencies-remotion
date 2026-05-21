@@ -30,10 +30,10 @@ const ensureIndexHtml = () => {
   const html = read(files.indexHtml);
 
   // Add a "Copy bulletin" button in the Daily Dispatch tool row (next to download).
-  const where = `<a class="mini-link" id="dailyDownloadLink" href="out/daily/latest.mp4" download>`;
-  const insertion = `          <button class="mini-button" id="copyBulletinButton" type="button" ${marker}>
-            Copy bulletin
-          </button>
+  const where = `            <a class="mini-link" id="dailyDownloadLink" href="out/daily/latest.mp4" download>`;
+  const insertion = `            <button class="mini-button" id="copyBulletinButton" type="button" ${marker}>
+              Copy bulletin
+            </button>
 `;
 
   const next = insertOnce({ content: html, marker, insertion, where });

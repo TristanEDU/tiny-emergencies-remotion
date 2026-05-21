@@ -19,6 +19,7 @@ const bulletinTag = document.querySelector("#bulletinTag");
 const dailyVideoPlaceholder = document.querySelector("#dailyVideoPlaceholder");
 const bulletinFeature = document.querySelector("#bulletinFeature");
 const bulletinFeatureName = document.querySelector("#bulletinFeatureName");
+const copyBulletinButton = document.querySelector("#copyBulletinButton");
 const bulletinFeatureDescription = document.querySelector(
   "#bulletinFeatureDescription",
 );
@@ -267,6 +268,47 @@ toggleVideosButton?.addEventListener("click", () => {
   });
   toggleVideosButton.textContent = "Pause videos";
   showToast("Videos resumed. Bureaucracy is back in motion.");
+});
+
+
+function buildBulletinText() {
+  const headline = clean(bulletinHeadline?.textContent ?? "");
+  const subhead = clean(bulletinSubhead?.textContent ?? "");
+  const bullets = Array.from(bulletinList?.querySelectorAll("li") ?? []).map((item) =>
+    clean(item.textContent ?? ""),
+  );
+  const featureName = clean(bulletinFeatureName?.textContent ?? "");
+  const featureDescription = clean(bulletinFeatureDescription?.textContent ?? "");
+
+  const lines = [];
+  if (headline) lines.push(headline);
+  if (subhead) lines.push("", subhead);
+  if (featureName || featureDescription) {
+    lines.push("", "Feature drop:");
+    if (featureName) lines.push("• " + featureName);
+    if (featureDescription) lines.push("• " + featureDescription);
+  }
+  if (bullets.length) lines.push("", ...bullets.map((item) => "• " + item));
+
+  return lines.join("\n").trim();
+}
+
+async function copyBulletin() {
+  const text = buildBulletinText();
+  if (!text) {
+    showToast("Nothing to copy yet. Please wait while the robots file the bulletin.");
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast("Bulletin copied. Please distribute it like it’s legally binding.");
+  } catch (error) {
+    showToast("Clipboard blocked. Screenshot it like a true bureaucrat.");
+  }
+}
+
+copyBulletinButton?.addEventListener("click", () => {
+  copyBulletin();
 });
 
 loadDailyBulletin();
