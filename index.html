@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Bureau of Tiny Emergencies</title>
+    <meta
+      name="description"
+      content="Government-grade nonsense for problems too small for therapy. Generate excuses, check the panic forecast, and file extremely official complaints."
+    />
+    <meta name="theme-color" content="#100b1f" />
+
+    <meta property="og:title" content="The Bureau of Tiny Emergencies" />
+    <meta
+      property="og:description"
+      content="Government-grade nonsense for problems too small for therapy. Generate excuses, check the panic forecast, and file extremely official complaints."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="out/tiny-emergency-still.jpeg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Bureau of Tiny Emergencies" />
+    <meta
+      name="twitter:description"
+      content="Government-grade nonsense for problems too small for therapy. Generate excuses, check the panic forecast, and file extremely official complaints."
+    />
+    <meta name="twitter:image" content="out/tiny-emergency-still.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -104,6 +125,11 @@
 
       <section class="memo-card" aria-live="polite">
         <div class="memo-stamp">Approved-ish</div>
+        <div class="memo-tools" aria-label="Memo tools">
+          <button class="mini-button" id="copyMemoButton" type="button">
+            Copy memo
+          </button>
+        </div>
         <p class="eyebrow">Official Memo</p>
         <h2 id="memoTitle">Your excuse is pending bureaucracy.</h2>
         <p id="memoBody">
@@ -150,7 +176,12 @@
             bureaucratic nonsense energy: PSAs, forecasts, snack policies, tab
             counseling, and other extremely official nonsense.
           </p>
-          <code>npm run remotion</code>
+          <div class="reel-tools">
+            <code>npm run remotion</code>
+            <button class="mini-button" id="toggleVideosButton" type="button">
+              Pause videos
+            </button>
+          </div>
         </div>
         <div class="video-grid">
           <article>
@@ -161,9 +192,15 @@
               muted
               loop
               playsinline
+              preload="metadata"
               controls
             ></video>
-            <strong>Public Service Announcement</strong>
+            <div class="video-meta">
+              <strong>Public Service Announcement</strong>
+              <a class="mini-link" href="out/tiny-emergency-ad.mp4" download>
+                Download
+              </a>
+            </div>
           </article>
           <article>
             <video
@@ -172,9 +209,15 @@
               muted
               loop
               playsinline
+              preload="metadata"
               controls
             ></video>
-            <strong>Panic Forecast</strong>
+            <div class="video-meta">
+              <strong>Panic Forecast</strong>
+              <a class="mini-link" href="out/panic-forecast.mp4" download>
+                Download
+              </a>
+            </div>
           </article>
           <article>
             <video
@@ -183,9 +226,15 @@
               muted
               loop
               playsinline
+              preload="metadata"
               controls
             ></video>
-            <strong>Complaint Receipt</strong>
+            <div class="video-meta">
+              <strong>Complaint Receipt</strong>
+              <a class="mini-link" href="out/complaint-receipt.mp4" download>
+                Download
+              </a>
+            </div>
           </article>
           <article>
             <video
@@ -194,9 +243,15 @@
               muted
               loop
               playsinline
+              preload="metadata"
               controls
             ></video>
-            <strong>Meeting Escape Plan</strong>
+            <div class="video-meta">
+              <strong>Meeting Escape Plan</strong>
+              <a class="mini-link" href="out/meeting-escape-plan.mp4" download>
+                Download
+              </a>
+            </div>
           </article>
           <article>
             <video
@@ -205,9 +260,15 @@
               muted
               loop
               playsinline
+              preload="metadata"
               controls
             ></video>
-            <strong>Snack Protocol</strong>
+            <div class="video-meta">
+              <strong>Snack Protocol</strong>
+              <a class="mini-link" href="out/snack-protocol.mp4" download>
+                Download
+              </a>
+            </div>
           </article>
           <article>
             <video
@@ -216,9 +277,15 @@
               muted
               loop
               playsinline
+              preload="metadata"
               controls
             ></video>
-            <strong>Tab Therapy</strong>
+            <div class="video-meta">
+              <strong>Tab Therapy</strong>
+              <a class="mini-link" href="out/tab-therapy.mp4" download>
+                Download
+              </a>
+            </div>
           </article>
         </div>
       </section>
@@ -239,6 +306,8 @@
       <span>Built locally. Certified nonsense. No refunds because it was free.</span>
       <a href="#top">Back to top ↑</a>
     </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>
   </body>

@@ -7,6 +7,9 @@ const panicButton = document.querySelector("#panicButton");
 const panicReadout = document.querySelector("#panicReadout");
 const complaintButton = document.querySelector("#complaintButton");
 const complaintReadout = document.querySelector("#complaintReadout");
+const copyMemoButton = document.querySelector("#copyMemoButton");
+const toggleVideosButton = document.querySelector("#toggleVideosButton");
+const toast = document.querySelector("#toast");
 
 const tones = {
   corporate: {
@@ -56,6 +59,8 @@ const complaintResponses = [
 
 let panicIndex = 0;
 let complaintIndex = 0;
+let toastTimer = null;
+let videosPaused = false;
 
 function clean(value) {
   return value.trim().replace(/\s+/g, " ");
@@ -80,6 +85,44 @@ function renderMemo(problem, toneName) {
     <li>Action item: ${tone.action}.</li>
     <li>Recommended snack: ${snack}, consumed with official urgency.</li>
   `;
+}
+
+function showToast(message) {
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  if (toastTimer) {
+    window.clearTimeout(toastTimer);
+  }
+
+  toastTimer = window.setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2200);
+}
+
+async function copyMemo() {
+  const title = memoTitle?.textContent?.trim() ?? "";
+  const body = memoBody?.textContent?.trim() ?? "";
+  const bullets = Array.from(memoList?.querySelectorAll("li") ?? []).map((item) =>
+    clean(item.textContent ?? ""),
+  );
+
+  const text = [title, "", body, "", ...bullets.map((item) => `• ${item}`)].join(
+    "\n",
+  );
+
+  if (!text.trim()) {
+    showToast("Nothing to copy. Please file a tiny emergency first.");
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast("Memo copied to clipboard. Please use it irresponsibly.");
+  } catch (error) {
+    showToast("Clipboard blocked. Highlight the memo like it’s 2007.");
+  }
 }
 
 excuseForm.addEventListener("submit", (event) => {
@@ -112,4 +155,31 @@ panicButton.addEventListener("click", () => {
 complaintButton.addEventListener("click", () => {
   complaintReadout.textContent = complaintResponses[complaintIndex];
   complaintIndex = (complaintIndex + 1) % complaintResponses.length;
+});
+
+copyMemoButton?.addEventListener("click", () => {
+  copyMemo();
+});
+
+toggleVideosButton?.addEventListener("click", () => {
+  const videos = Array.from(document.querySelectorAll(".video-grid video"));
+  if (!videos.length) return;
+
+  videosPaused = !videosPaused;
+
+  if (videosPaused) {
+    videos.forEach((video) => video.pause());
+    toggleVideosButton.textContent = "Play videos";
+    showToast("Videos paused. Your CPU has filed a thank-you note.");
+    return;
+  }
+
+  videos.forEach((video) => {
+    const playAttempt = video.play();
+    if (playAttempt && typeof playAttempt.catch === "function") {
+      playAttempt.catch(() => {});
+    }
+  });
+  toggleVideosButton.textContent = "Pause videos";
+  showToast("Videos resumed. Bureaucracy is back in motion.");
 });
