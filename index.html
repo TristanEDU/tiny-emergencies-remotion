@@ -312,10 +312,19 @@
           <video
             id="dailyVideo"
             src="out/daily/latest.mp4"
+            poster="out/tiny-emergency-still.jpeg"
             playsinline
             preload="metadata"
             controls
           ></video>
+          <div class="daily-placeholder" id="dailyVideoPlaceholder" hidden>
+            <p class="eyebrow">Dispatch in progress</p>
+            <strong>Robots are rendering.</strong>
+            <p>
+              Today’s daily dispatch hasn’t landed yet. Please check back after
+              the automation runs.
+            </p>
+          </div>
           <article class="bulletin-card">
             <div class="bulletin-top">
               <strong id="bulletinHeadline">Daily dispatch pending.</strong>

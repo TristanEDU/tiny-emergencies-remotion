@@ -468,6 +468,21 @@ input {
   background: #17111e;
 }
 
+.daily-placeholder {
+  display: grid;
+  gap: 0.75rem;
+  border: 3px solid #17111e;
+  border-radius: 1.1rem;
+  padding: 1.4rem;
+  box-shadow: 9px 9px 0 #17111e;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.daily-placeholder strong {
+  font-size: 1.3rem;
+  letter-spacing: -0.04em;
+}
+
 .bulletin-card {
   display: grid;
   gap: 0.75rem;

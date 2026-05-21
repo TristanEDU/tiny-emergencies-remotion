@@ -16,6 +16,7 @@ const bulletinHeadline = document.querySelector("#bulletinHeadline");
 const bulletinSubhead = document.querySelector("#bulletinSubhead");
 const bulletinList = document.querySelector("#bulletinList");
 const bulletinTag = document.querySelector("#bulletinTag");
+const dailyVideoPlaceholder = document.querySelector("#dailyVideoPlaceholder");
 
 const tones = {
   corporate: {
@@ -147,6 +148,23 @@ async function loadDailyBulletin() {
     // Leave placeholders. Bureaucracy is working on it.
   }
 }
+
+function setDailyVideoAvailable(isAvailable) {
+  if (!dailyVideo) return;
+  if (dailyVideoPlaceholder) {
+    dailyVideoPlaceholder.hidden = isAvailable;
+  }
+  dailyVideo.hidden = !isAvailable;
+}
+
+dailyVideo?.addEventListener("error", () => {
+  setDailyVideoAvailable(false);
+  if (bulletinSubhead) {
+    bulletinSubhead.textContent =
+      "Today’s dispatch isn’t available yet. The robots are rendering (and filing forms about rendering).";
+  }
+  showToast("Daily dispatch not found yet. Please return after the robots finish arguing.");
+});
 
 async function copyMemo() {
   const title = memoTitle?.textContent?.trim() ?? "";
