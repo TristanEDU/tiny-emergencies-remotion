@@ -8,6 +8,7 @@
     "remotion": "remotion studio src/index.ts",
     "compositions": "remotion compositions src/index.ts",
     "daily": "node scripts/generate-daily.mjs",
+    "bureau:daily": "node scripts/daily-bureau-bot.mjs",
     "still": "remotion still src/index.ts TinyEmergencyAd --frame=45 --scale=0.25 out/tiny-emergency-still.jpeg",
     "render": "remotion render src/index.ts TinyEmergencyAd out/tiny-emergency-ad.mp4",
     "render:forecast": "remotion render src/index.ts PanicForecast out/panic-forecast.mp4",
