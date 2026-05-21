@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-20",
-  "seed": 1079162637,
+  "dateISO": "2026-05-21",
+  "seed": 1191581041,
   "mood": "paperwork",
-  "includeSound": true,
+  "includeSound": false,
   "headline": "A form has feelings now.",
-  "subhead": "This dispatch is legally binding in the emotional sense only.",
+  "subhead": "Please initial the corner of your soul and proceed.",
   "bulletins": [
-    "Your inbox is drizzling passive-aggression with a 60% chance of 'circling back.'",
     "Reminder: sighs must be filed in triplicate.",
     "Approval stamp deployed with theatrical confidence.",
-    "Stapler has been promoted to manager (against everyone's wishes)."
+    "Your inbox is drizzling passive-aggression with a 60% chance of 'circling back.'",
+    "New policy: all deadlines are now 'interpretive.'"
   ],
   "feature": {
-    "name": "Mood Stamp",
-    "description": "A different stamp design appears today. It does nothing, but it judges you."
+    "name": "Emergency Horoscope",
+    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-21T01:45:59.683Z"
+  "generatedAt": "2026-05-21T16:13:04.834Z"
 }
