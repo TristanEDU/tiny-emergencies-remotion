@@ -1,0 +1,17 @@
+{
+  "dateISO": "2026-01-01",
+  "seed": 1337,
+  "mood": "paperwork",
+  "includeSound": false,
+  "headline": "Daily dispatch pending.",
+  "subhead": "The bureau automation will publish a new dispatch here every day.",
+  "bulletins": [
+    "Your calendar is doing something suspicious.",
+    "Please stand by for paperwork.",
+    "The printer is warming up its opinions.",
+    "This section will update automatically."
+  ],
+  "timeZone": "America/Los_Angeles",
+  "generatedAt": "2026-01-01T00:00:00.000Z"
+}
+

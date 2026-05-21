@@ -10,6 +10,12 @@ const complaintReadout = document.querySelector("#complaintReadout");
 const copyMemoButton = document.querySelector("#copyMemoButton");
 const toggleVideosButton = document.querySelector("#toggleVideosButton");
 const toast = document.querySelector("#toast");
+const dailyVideo = document.querySelector("#dailyVideo");
+const dailyDownloadLink = document.querySelector("#dailyDownloadLink");
+const bulletinHeadline = document.querySelector("#bulletinHeadline");
+const bulletinSubhead = document.querySelector("#bulletinSubhead");
+const bulletinList = document.querySelector("#bulletinList");
+const bulletinTag = document.querySelector("#bulletinTag");
 
 const tones = {
   corporate: {
@@ -101,6 +107,47 @@ function showToast(message) {
   }, 2200);
 }
 
+async function loadDailyBulletin() {
+  if (!bulletinHeadline || !bulletinList) return;
+
+  try {
+    const response = await fetch("out/daily/bulletin.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const data = await response.json();
+
+    bulletinHeadline.textContent = data.headline ?? "Daily dispatch pending.";
+    if (bulletinSubhead) {
+      bulletinSubhead.textContent =
+        data.subhead ?? "The bureau is generating nonsense. Please hold.";
+    }
+    if (bulletinTag) {
+      bulletinTag.textContent = `${data.mood ?? "mood?"}${
+        data.includeSound ? " · audio" : ""
+      }`;
+    }
+
+    const items = Array.isArray(data.bulletins) ? data.bulletins : [];
+    bulletinList.innerHTML = items
+      .slice(0, 6)
+      .map((item) => `<li>${clean(item)}</li>`)
+      .join("");
+
+    const dateISO = typeof data.dateISO === "string" ? data.dateISO : null;
+    const cacheKey =
+      dateISO && data.seed ? `${dateISO}-${data.seed}` : `${Date.now()}`;
+
+    if (dailyVideo && dateISO) {
+      dailyVideo.src = `out/daily/${encodeURIComponent(dateISO)}.mp4?v=${encodeURIComponent(cacheKey)}`;
+    }
+
+    if (dailyDownloadLink && dateISO) {
+      dailyDownloadLink.href = `out/daily/${encodeURIComponent(dateISO)}.mp4`;
+    }
+  } catch (error) {
+    // Leave placeholders. Bureaucracy is working on it.
+  }
+}
+
 async function copyMemo() {
   const title = memoTitle?.textContent?.trim() ?? "";
   const body = memoBody?.textContent?.trim() ?? "";
@@ -183,3 +230,5 @@ toggleVideosButton?.addEventListener("click", () => {
   toggleVideosButton.textContent = "Pause videos";
   showToast("Videos resumed. Bureaucracy is back in motion.");
 });
+
+loadDailyBulletin();

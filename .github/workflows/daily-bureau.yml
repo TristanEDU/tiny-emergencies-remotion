@@ -1,0 +1,73 @@
+name: Daily Bureau Dispatch
+
+on:
+  schedule:
+    # Runs daily at 17:17 UTC (~10:17am Pacific during daylight savings).
+    - cron: "17 17 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-bureau-dispatch
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Pick a browser (best effort)
+        shell: bash
+        run: |
+          set -euo pipefail
+          BROWSER="$(command -v google-chrome || true)"
+          if [ -z "$BROWSER" ]; then BROWSER="$(command -v google-chrome-stable || true)"; fi
+          if [ -z "$BROWSER" ]; then BROWSER="$(command -v chromium-browser || true)"; fi
+          if [ -z "$BROWSER" ]; then BROWSER="$(command -v chromium || true)"; fi
+
+          if [ -n "$BROWSER" ]; then
+            echo "BROWSER_EXECUTABLE=$BROWSER" >> "$GITHUB_ENV"
+            echo "Using browser: $BROWSER"
+          else
+            echo "No system browser found. Remotion may download Chromium during render."
+          fi
+
+      - name: Generate daily video + update archive
+        env:
+          TIMEZONE: America/Los_Angeles
+          KEEP_DAYS: "60"
+        run: npm run daily
+
+      - name: Commit and push (if changed)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add out/daily
+          git commit -m "chore(daily): dispatch $(date -u +%F)"
+          git push
+

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dispatch Archive · Bureau of Tiny Emergencies</title>
+    <meta
+      name="description"
+      content="A chronologically questionable archive of daily Remotion dispatches from the Bureau of Tiny Emergencies."
+    />
+    <meta name="theme-color" content="#100b1f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Bureau home">
+        <span class="brand-mark">!</span>
+        <span>Bureau of Tiny Emergencies</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#daily">Today</a>
+        <a href="index.html#excuse">Excuse Desk</a>
+        <a href="index.html#complaints">Complaints</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero library-hero">
+        <p class="eyebrow">Dispatch Archive</p>
+        <h1>Daily broadcasts, filed aggressively.</h1>
+        <p class="hero-copy">
+          A new Remotion dispatch drops every day (via automation). Use this page
+          to browse, download, and judge them.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="index.html#daily">Back to today</a>
+          <a class="button secondary" href="out/daily/latest.mp4" download>
+            Download latest
+          </a>
+        </div>
+      </section>
+
+      <section class="section library-section">
+        <div class="section-heading">
+          <p class="eyebrow">Video library</p>
+          <h2>Chronological chaos.</h2>
+          <p>
+            Newest first. Some have audio. None have actual helpful content.
+          </p>
+        </div>
+
+        <div class="library-toolbar">
+          <label class="library-search">
+            <span>Search</span>
+            <input id="librarySearch" type="search" placeholder="Try: hotline, snack, panic…" />
+          </label>
+          <div class="library-meta" id="libraryMeta">Loading dispatches…</div>
+        </div>
+
+        <div class="library-grid" id="libraryGrid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Archive maintained by robots. Blame them.</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="library.js"></script>
+  </body>
+</html>
+

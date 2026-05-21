@@ -46,6 +46,8 @@
       <nav aria-label="Primary navigation">
         <a href="#excuse">Excuse Desk</a>
         <a href="#forecast">Forecast</a>
+        <a href="#daily">Daily dispatch</a>
+        <a href="library.html">Video library</a>
         <a href="#complaints">Complaints</a>
       </nav>
     </header>
@@ -286,6 +288,48 @@
                 Download
               </a>
             </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="daily" class="daily-box">
+        <div>
+          <p class="eyebrow">Daily Dispatch</p>
+          <h2>One new broadcast a day.</h2>
+          <p>
+            The Bureau’s automation renders a fresh Remotion dispatch daily.
+            Some are longer. Some have sound. All are legally questionable.
+          </p>
+          <div class="reel-tools">
+            <a class="mini-link" href="library.html">Browse the archive</a>
+            <a class="mini-link" id="dailyDownloadLink" href="out/daily/latest.mp4" download>
+              Download today
+            </a>
+          </div>
+        </div>
+
+        <div class="daily-grid">
+          <video
+            id="dailyVideo"
+            src="out/daily/latest.mp4"
+            playsinline
+            preload="metadata"
+            controls
+          ></video>
+          <article class="bulletin-card">
+            <div class="bulletin-top">
+              <strong id="bulletinHeadline">Daily dispatch pending.</strong>
+              <span class="bulletin-tag" id="bulletinTag">audio: sometimes</span>
+            </div>
+            <p id="bulletinSubhead">
+              The automation will publish a new daily dispatch soon.
+            </p>
+            <ul id="bulletinList">
+              <li>Stand by for paperwork.</li>
+              <li>Please hydrate (emotionally).</li>
+              <li>Printer is warming up its opinions.</li>
+              <li>We apologize in advance for the vibes.</li>
+            </ul>
           </article>
         </div>
       </section>

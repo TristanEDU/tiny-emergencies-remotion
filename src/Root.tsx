@@ -1,5 +1,6 @@
 import { Composition } from "remotion";
 import { TinyEmergencyAd, type TinyEmergencyAdProps } from "./TinyEmergencyAd";
+import { DailyDispatch, type DailyDispatchProps } from "./DailyDispatch";
 
 const sharedSettings = {
   component: TinyEmergencyAd,
@@ -117,6 +118,31 @@ export const RemotionRoot = () => {
       {compositions.map(({ id, props }) => (
         <Composition key={id} id={id} {...sharedSettings} defaultProps={props} />
       ))}
+      <Composition
+        id="DailyDispatch"
+        component={DailyDispatch}
+        width={1080}
+        height={1080}
+        fps={30}
+        durationInFrames={900}
+        defaultProps={
+          {
+            dateISO: "2026-01-01",
+            seed: 1337,
+            includeSound: false,
+            mood: "paperwork",
+            headline: "The bureau has opinions.",
+            subhead:
+              "This is the daily dispatch template. The automation will fill it with new nonsense every day.",
+            bulletins: [
+              "Your calendar has formed a small militia.",
+              "The coffee is now legally a meeting participant.",
+              "Please file all sighs in triplicate.",
+              "The printer will only cooperate if praised.",
+            ],
+          } satisfies DailyDispatchProps
+        }
+      />
     </>
   );
 };
