@@ -1,20 +1,20 @@
 {
   "dateISO": "2026-05-21",
-  "seed": 1191581041,
-  "mood": "paperwork",
+  "seed": 4010571197,
+  "mood": "tabs",
   "includeSound": false,
-  "headline": "A form has feelings now.",
-  "subhead": "Please initial the corner of your soul and proceed.",
+  "headline": "Your tabs are forming a union.",
+  "subhead": "Negotiations continue. Demands include benefits and closure.",
   "bulletins": [
-    "Reminder: sighs must be filed in triplicate.",
-    "Approval stamp deployed with theatrical confidence.",
-    "Your inbox is drizzling passive-aggression with a 60% chance of 'circling back.'",
-    "New policy: all deadlines are now 'interpretive.'"
+    "The loud one is hiding behind a 'todo' list from 2019.",
+    "Seven are emotional support documents in different fonts.",
+    "Reminder: 'restore previous session' is not a lifestyle.",
+    "Closing tabs may trigger an immediate identity shift."
   ],
   "feature": {
-    "name": "Emergency Horoscope",
-    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
+    "name": "Desk Weather",
+    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-21T16:13:04.834Z"
+  "generatedAt": "2026-05-21T18:01:14.436Z"
 }
