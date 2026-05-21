@@ -6,17 +6,25 @@ import { fileURLToPath } from "node:url";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(scriptDir, "..");
+const nodeBinDir = path.dirname(process.execPath);
 
 const DEFAULT_TZ = "America/Los_Angeles";
 const moods = ["paperwork", "hotline", "panic", "snack", "tabs"];
 
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
+const withCurrentNodePath = (env = process.env) => ({
+  ...env,
+  PATH: [nodeBinDir, env.PATH].filter(Boolean).join(path.delimiter),
+});
+
 const run = (command, args, options = {}) => {
+  const env = withCurrentNodePath(options.env);
   const result = spawnSync(command, args, {
     cwd: projectRoot,
     stdio: "inherit",
     ...options,
+    env,
   });
 
   if (result.error) throw result.error;
@@ -48,7 +56,11 @@ const ensureDeps = () => {
 };
 
 const hasFfmpeg = () => {
-  const probe = spawnSync("ffmpeg", ["-version"], { cwd: projectRoot, stdio: "ignore" });
+  const probe = spawnSync("ffmpeg", ["-version"], {
+    cwd: projectRoot,
+    env: withCurrentNodePath(),
+    stdio: "ignore",
+  });
   return probe.status === 0 && !probe.error;
 };
 
