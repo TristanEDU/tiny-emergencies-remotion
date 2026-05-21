@@ -11,7 +11,10 @@
     "The printer is warming up its opinions.",
     "This section will update automatically."
   ],
+  "feature": {
+    "name": "Policy of the Day",
+    "description": "A new policy clause has been issued and immediately ignored with confidence."
+  },
   "timeZone": "America/Los_Angeles",
   "generatedAt": "2026-01-01T00:00:00.000Z"
 }
-

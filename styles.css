@@ -517,6 +517,28 @@ input {
   white-space: nowrap;
 }
 
+.bulletin-feature {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  border: 1px dashed rgba(255, 248, 232, 0.28);
+  border-radius: 1.2rem;
+  padding: 0.9rem 0.95rem;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.bulletin-feature strong {
+  color: var(--ink);
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.bulletin-feature p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .bulletin-card ul {
   display: grid;
   gap: 0.6rem;

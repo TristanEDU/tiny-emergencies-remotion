@@ -119,6 +119,34 @@ const contentByMood = {
   },
 };
 
+const dailyFeatures = [
+  {
+    name: "Policy of the Day",
+    description:
+      "A new policy clause has been issued and immediately ignored with confidence.",
+  },
+  {
+    name: "Desk Weather",
+    description:
+      "Your desk now has atmospheric conditions. Please dress accordingly (emotionally).",
+  },
+  {
+    name: "Sigh Ledger",
+    description:
+      "All sighs must be logged. Please provide a receipt for each exhale.",
+  },
+  {
+    name: "Mood Stamp",
+    description:
+      "A different stamp design appears today. It does nothing, but it judges you.",
+  },
+  {
+    name: "Emergency Horoscope",
+    description:
+      "The bureau forecasts your next tiny crisis with unsettling accuracy.",
+  },
+];
+
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
 const makeRng = (seed) => {
@@ -248,6 +276,7 @@ const main = () => {
   const subhead =
     process.env.SUBHEAD || content.subhead[Math.floor(rng() * content.subhead.length)];
   const bulletins = pickUnique(rng, content.bullets, 4);
+  const feature = dailyFeatures[Math.floor(rng() * dailyFeatures.length)];
 
   const dailyDir = path.join(projectRoot, "out", "daily");
   ensureDir(dailyDir);
@@ -261,6 +290,7 @@ const main = () => {
     headline,
     subhead,
     bulletins,
+    feature,
     timeZone,
     generatedAt: now.toISOString(),
   });

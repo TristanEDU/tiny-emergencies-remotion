@@ -17,6 +17,11 @@ const bulletinSubhead = document.querySelector("#bulletinSubhead");
 const bulletinList = document.querySelector("#bulletinList");
 const bulletinTag = document.querySelector("#bulletinTag");
 const dailyVideoPlaceholder = document.querySelector("#dailyVideoPlaceholder");
+const bulletinFeature = document.querySelector("#bulletinFeature");
+const bulletinFeatureName = document.querySelector("#bulletinFeatureName");
+const bulletinFeatureDescription = document.querySelector(
+  "#bulletinFeatureDescription",
+);
 
 const tones = {
   corporate: {
@@ -125,6 +130,21 @@ async function loadDailyBulletin() {
       bulletinTag.textContent = `${data.mood ?? "mood?"}${
         data.includeSound ? " · audio" : ""
       }`;
+    }
+
+    const feature = data.feature ?? null;
+    if (bulletinFeature && feature && typeof feature === "object") {
+      const name = typeof feature.name === "string" ? feature.name : "";
+      const description =
+        typeof feature.description === "string" ? feature.description : "";
+
+      if (name && bulletinFeatureName) bulletinFeatureName.textContent = name;
+      if (description && bulletinFeatureDescription) {
+        bulletinFeatureDescription.textContent = description;
+      }
+      bulletinFeature.hidden = !(name || description);
+    } else if (bulletinFeature) {
+      bulletinFeature.hidden = true;
     }
 
     const items = Array.isArray(data.bulletins) ? data.bulletins : [];
