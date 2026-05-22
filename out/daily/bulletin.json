@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-21",
-  "seed": 4010571197,
-  "mood": "tabs",
+  "dateISO": "2026-05-22",
+  "seed": 949644513,
+  "mood": "hotline",
   "includeSound": false,
-  "headline": "Your tabs are forming a union.",
-  "subhead": "Negotiations continue. Demands include benefits and closure.",
+  "headline": "You have reached the Tiny Emergency Hotline.",
+  "subhead": "Your call may be recorded and used as a cautionary tale.",
   "bulletins": [
-    "The loud one is hiding behind a 'todo' list from 2019.",
-    "Seven are emotional support documents in different fonts.",
-    "Reminder: 'restore previous session' is not a lifestyle.",
-    "Closing tabs may trigger an immediate identity shift."
+    "Press 3 to escalate to the Department of Loud Sighs.",
+    "Press 1 if you said 'you too' to a dentist.",
+    "Thank you for your patience. We will not be using it responsibly.",
+    "Your issue has been placed in a velvet-lined shrug queue."
   ],
   "feature": {
-    "name": "Desk Weather",
-    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
+    "name": "Emergency Horoscope",
+    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-21T18:01:14.436Z"
+  "generatedAt": "2026-05-22T17:59:24.582Z"
 }
