@@ -1,20 +1,20 @@
 {
   "dateISO": "2026-05-22",
-  "seed": 949644513,
-  "mood": "hotline",
+  "seed": 3137320775,
+  "mood": "paperwork",
   "includeSound": false,
-  "headline": "You have reached the Tiny Emergency Hotline.",
-  "subhead": "Your call may be recorded and used as a cautionary tale.",
+  "headline": "We regret to inform you: paperwork is contagious.",
+  "subhead": "Please initial the corner of your soul and proceed.",
   "bulletins": [
-    "Press 3 to escalate to the Department of Loud Sighs.",
-    "Press 1 if you said 'you too' to a dentist.",
-    "Thank you for your patience. We will not be using it responsibly.",
-    "Your issue has been placed in a velvet-lined shrug queue."
+    "Approval stamp deployed with theatrical confidence.",
+    "Your inbox is drizzling passive-aggression with a 60% chance of 'circling back.'",
+    "Reminder: sighs must be filed in triplicate.",
+    "Stapler has been promoted to manager (against everyone's wishes)."
   ],
   "feature": {
-    "name": "Emergency Horoscope",
-    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
+    "name": "Sigh Ledger",
+    "description": "All sighs must be logged. Please provide a receipt for each exhale."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-22T17:59:24.582Z"
+  "generatedAt": "2026-05-22T17:48:47.066Z"
 }

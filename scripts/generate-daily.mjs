@@ -269,40 +269,66 @@ const findBrowserExecutable = () => {
   return null;
 };
 
+const getBrowserStrategies = () => {
+  const systemBrowserExecutable = findBrowserExecutable();
+  const strategies = [];
+
+  if (systemBrowserExecutable) {
+    strategies.push({
+      label: `system browser (${systemBrowserExecutable})`,
+      executable: systemBrowserExecutable,
+    });
+  }
+
+  strategies.push({
+    label: "Remotion-managed browser",
+    executable: null,
+  });
+
+  return strategies;
+};
+
 const renderDailyVideo = async ({ outputVideo, props }) => {
-  const browserExecutable = findBrowserExecutable();
+  const browserStrategies = getBrowserStrategies();
   const renderConcurrency = process.env.REMOTION_CONCURRENCY || "1";
   const basePort = Number(process.env.REMOTION_PORT || "3101");
   const attempts = Number(process.env.REMOTION_RENDER_ATTEMPTS || "2");
   let lastError = null;
+  let renderAttempt = 0;
 
-  for (let attempt = 1; attempt <= attempts; attempt += 1) {
-    const port = await getAvailablePort(basePort + attempt - 1);
-    console.log(
-      `Rendering DailyDispatch on port ${port} (concurrency=${renderConcurrency}, attempt=${attempt}/${attempts})`,
-    );
+  for (const browserStrategy of browserStrategies) {
+    for (let attempt = 1; attempt <= attempts; attempt += 1) {
+      renderAttempt += 1;
+      const totalAttempts = browserStrategies.length * attempts;
+      const port = await getAvailablePort(basePort + renderAttempt - 1);
+      console.log(
+        `Rendering DailyDispatch on port ${port} (concurrency=${renderConcurrency}, browser=${browserStrategy.label}, attempt=${renderAttempt}/${totalAttempts})`,
+      );
 
-    try {
-      run("npx", [
-        "--no-install",
-        "remotion",
-        "render",
-        "src/index.ts",
-        "DailyDispatch",
-        outputVideo,
-        "--port",
-        String(port),
-        "--concurrency",
-        renderConcurrency,
-        ...(browserExecutable ? ["--browser-executable", browserExecutable] : []),
-        "--props",
-        JSON.stringify(props),
-      ]);
-      return;
-    } catch (error) {
-      lastError = error;
-      if (attempt === attempts) break;
-      console.warn(`DailyDispatch render failed on port ${port}; retrying on a fresh port.`);
+      try {
+        run("npx", [
+          "--no-install",
+          "remotion",
+          "render",
+          "src/index.ts",
+          "DailyDispatch",
+          outputVideo,
+          "--port",
+          String(port),
+          "--concurrency",
+          renderConcurrency,
+          ...(browserStrategy.executable ? ["--browser-executable", browserStrategy.executable] : []),
+          "--props",
+          JSON.stringify(props),
+        ]);
+        return;
+      } catch (error) {
+        lastError = error;
+        if (renderAttempt === totalAttempts) break;
+        console.warn(
+          `DailyDispatch render failed on port ${port}; retrying with a fresh port/browser strategy.`,
+        );
+      }
     }
   }
 

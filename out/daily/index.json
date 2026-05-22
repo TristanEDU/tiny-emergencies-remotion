@@ -1,13 +1,13 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-05-22T17:59:24.582Z",
+  "generatedAt": "2026-05-22T17:48:47.066Z",
   "entries": [
     {
       "dateISO": "2026-05-22",
       "mp4": "out/daily/2026-05-22.mp4",
-      "headline": "You have reached the Tiny Emergency Hotline.",
-      "mood": "hotline",
+      "headline": "We regret to inform you: paperwork is contagious.",
+      "mood": "paperwork",
       "includeSound": false
     },
     {
