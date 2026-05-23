@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-22",
-  "seed": 3137320775,
-  "mood": "paperwork",
-  "includeSound": false,
-  "headline": "We regret to inform you: paperwork is contagious.",
-  "subhead": "Please initial the corner of your soul and proceed.",
+  "dateISO": "2026-05-23",
+  "seed": 1663354586,
+  "mood": "hotline",
+  "includeSound": true,
+  "headline": "You have reached the Tiny Emergency Hotline.",
+  "subhead": "For faster service, pretend your Wi‑Fi is a metaphor.",
   "bulletins": [
-    "Approval stamp deployed with theatrical confidence.",
-    "Your inbox is drizzling passive-aggression with a 60% chance of 'circling back.'",
-    "Reminder: sighs must be filed in triplicate.",
-    "Stapler has been promoted to manager (against everyone's wishes)."
+    "All representatives are currently 'in another meeting' (emotionally).",
+    "Your issue has been placed in a velvet-lined shrug queue.",
+    "Press 2 if you opened the fridge and forgot your entire personality.",
+    "Thank you for your patience. We will not be using it responsibly."
   ],
   "feature": {
-    "name": "Sigh Ledger",
-    "description": "All sighs must be logged. Please provide a receipt for each exhale."
+    "name": "Policy of the Day",
+    "description": "A new policy clause has been issued and immediately ignored with confidence."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-22T17:48:47.066Z"
+  "generatedAt": "2026-05-23T17:41:03.051Z"
 }
