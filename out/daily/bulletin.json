@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-23",
-  "seed": 1663354586,
-  "mood": "hotline",
+  "dateISO": "2026-05-24",
+  "seed": 4123646715,
+  "mood": "panic",
   "includeSound": true,
-  "headline": "You have reached the Tiny Emergency Hotline.",
-  "subhead": "For faster service, pretend your Wi‑Fi is a metaphor.",
+  "headline": "Atmospheric conditions: quick questions approaching rapidly.",
+  "subhead": "High probability of nodding before comprehension arrives.",
   "bulletins": [
-    "All representatives are currently 'in another meeting' (emotionally).",
-    "Your issue has been placed in a velvet-lined shrug queue.",
-    "Press 2 if you opened the fridge and forgot your entire personality.",
-    "Thank you for your patience. We will not be using it responsibly."
+    "4:59 PM: urgent sparkle advisory (avoid eye contact).",
+    "Recommended coping mechanism: open a blank spreadsheet for comfort.",
+    "1:00 PM: meeting thunder and a front of 'makes sense.'",
+    "Tomorrow: chance of emotionally damp tabs."
   ],
   "feature": {
-    "name": "Policy of the Day",
-    "description": "A new policy clause has been issued and immediately ignored with confidence."
+    "name": "Emergency Horoscope",
+    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-23T17:41:03.051Z"
+  "generatedAt": "2026-05-24T17:39:55.699Z"
 }
