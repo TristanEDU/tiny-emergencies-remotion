@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-24",
-  "seed": 4123646715,
+  "dateISO": "2026-05-25",
+  "seed": 4292988730,
   "mood": "panic",
   "includeSound": true,
-  "headline": "Atmospheric conditions: quick questions approaching rapidly.",
-  "subhead": "High probability of nodding before comprehension arrives.",
+  "headline": "Storm warning: someone said 'can we just' and meant chaos.",
+  "subhead": "Carry a small umbrella for emails that begin with 'hey'.",
   "bulletins": [
     "4:59 PM: urgent sparkle advisory (avoid eye contact).",
     "Recommended coping mechanism: open a blank spreadsheet for comfort.",
     "1:00 PM: meeting thunder and a front of 'makes sense.'",
-    "Tomorrow: chance of emotionally damp tabs."
+    "9:00 AM: inbox drizzle with localized calendar turbulence."
   ],
   "feature": {
-    "name": "Emergency Horoscope",
-    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
+    "name": "Sigh Ledger",
+    "description": "All sighs must be logged. Please provide a receipt for each exhale."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-24T17:39:55.699Z"
+  "generatedAt": "2026-05-25T17:54:36.873Z"
 }

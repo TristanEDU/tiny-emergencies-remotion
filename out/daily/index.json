@@ -1,8 +1,15 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-05-24T17:39:55.699Z",
+  "generatedAt": "2026-05-25T17:54:36.873Z",
   "entries": [
+    {
+      "dateISO": "2026-05-25",
+      "mp4": "out/daily/2026-05-25.mp4",
+      "headline": "Storm warning: someone said 'can we just' and meant chaos.",
+      "mood": "panic",
+      "includeSound": true
+    },
     {
       "dateISO": "2026-05-24",
       "mp4": "out/daily/2026-05-24.mp4",
