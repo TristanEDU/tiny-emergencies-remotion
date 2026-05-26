@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-25",
-  "seed": 4292988730,
-  "mood": "panic",
+  "dateISO": "2026-05-26",
+  "seed": 913153200,
+  "mood": "tabs",
   "includeSound": true,
-  "headline": "Storm warning: someone said 'can we just' and meant chaos.",
-  "subhead": "Carry a small umbrella for emails that begin with 'hey'.",
+  "headline": "We have detected 47 open tabs and one secret shame tab.",
+  "subhead": "Your RAM has filed for witness protection.",
   "bulletins": [
-    "4:59 PM: urgent sparkle advisory (avoid eye contact).",
-    "Recommended coping mechanism: open a blank spreadsheet for comfort.",
-    "1:00 PM: meeting thunder and a front of 'makes sense.'",
-    "9:00 AM: inbox drizzle with localized calendar turbulence."
+    "The loud one is hiding behind a 'todo' list from 2019.",
+    "Four are duplicate calendars and one is a prophecy.",
+    "Closing tabs may trigger an immediate identity shift.",
+    "Reminder: 'restore previous session' is not a lifestyle."
   ],
   "feature": {
-    "name": "Sigh Ledger",
-    "description": "All sighs must be logged. Please provide a receipt for each exhale."
+    "name": "Desk Weather",
+    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-25T17:54:36.873Z"
+  "generatedAt": "2026-05-26T18:12:25.858Z"
 }
