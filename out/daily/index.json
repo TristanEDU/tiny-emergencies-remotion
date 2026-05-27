@@ -1,8 +1,15 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-05-26T18:12:25.858Z",
+  "generatedAt": "2026-05-27T18:12:59.983Z",
   "entries": [
+    {
+      "dateISO": "2026-05-27",
+      "mp4": "out/daily/2026-05-27.mp4",
+      "headline": "Snack protocol activated.",
+      "mood": "snack",
+      "includeSound": false
+    },
     {
       "dateISO": "2026-05-26",
       "mp4": "out/daily/2026-05-26.mp4",

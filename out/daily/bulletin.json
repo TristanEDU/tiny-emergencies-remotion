@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-26",
-  "seed": 913153200,
-  "mood": "tabs",
-  "includeSound": true,
-  "headline": "We have detected 47 open tabs and one secret shame tab.",
-  "subhead": "Your RAM has filed for witness protection.",
+  "dateISO": "2026-05-27",
+  "seed": 37606308,
+  "mood": "snack",
+  "includeSound": false,
+  "headline": "Snack protocol activated.",
+  "subhead": "Hydration is a rumor; snacks are policy.",
   "bulletins": [
-    "The loud one is hiding behind a 'todo' list from 2019.",
-    "Four are duplicate calendars and one is a prophecy.",
-    "Closing tabs may trigger an immediate identity shift.",
-    "Reminder: 'restore previous session' is not a lifestyle."
+    "If your brain is buffering, deploy chips immediately.",
+    "New law: cold fries qualify as a salad after 9 PM.",
+    "Reminder: coffee counts as a meeting participant, not a breakfast.",
+    "Denied: 'just air' (not a snack; that's a threat)."
   ],
   "feature": {
-    "name": "Desk Weather",
-    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
+    "name": "Policy of the Day",
+    "description": "A new policy clause has been issued and immediately ignored with confidence."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-26T18:12:25.858Z"
+  "generatedAt": "2026-05-27T18:12:59.983Z"
 }
