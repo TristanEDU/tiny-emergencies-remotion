@@ -1,8 +1,15 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-05-27T18:12:59.983Z",
+  "generatedAt": "2026-05-28T18:21:15.565Z",
   "entries": [
+    {
+      "dateISO": "2026-05-28",
+      "mp4": "out/daily/2026-05-28.mp4",
+      "headline": "Your hold music has been approved-ish.",
+      "mood": "hotline",
+      "includeSound": true
+    },
     {
       "dateISO": "2026-05-27",
       "mp4": "out/daily/2026-05-27.mp4",

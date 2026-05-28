@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-27",
-  "seed": 37606308,
-  "mood": "snack",
-  "includeSound": false,
-  "headline": "Snack protocol activated.",
-  "subhead": "Hydration is a rumor; snacks are policy.",
+  "dateISO": "2026-05-28",
+  "seed": 54689341,
+  "mood": "hotline",
+  "includeSound": true,
+  "headline": "Your hold music has been approved-ish.",
+  "subhead": "Estimated wait time: three business emotions.",
   "bulletins": [
-    "If your brain is buffering, deploy chips immediately.",
-    "New law: cold fries qualify as a salad after 9 PM.",
-    "Reminder: coffee counts as a meeting participant, not a breakfast.",
-    "Denied: 'just air' (not a snack; that's a threat)."
+    "Press 2 if you opened the fridge and forgot your entire personality.",
+    "Thank you for your patience. We will not be using it responsibly.",
+    "Press 1 if you said 'you too' to a dentist.",
+    "All representatives are currently 'in another meeting' (emotionally)."
   ],
   "feature": {
-    "name": "Policy of the Day",
-    "description": "A new policy clause has been issued and immediately ignored with confidence."
+    "name": "Desk Weather",
+    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-27T18:12:59.983Z"
+  "generatedAt": "2026-05-28T18:21:15.565Z"
 }
