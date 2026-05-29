@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-28",
-  "seed": 54689341,
+  "dateISO": "2026-05-29",
+  "seed": 223157056,
   "mood": "hotline",
   "includeSound": true,
   "headline": "Your hold music has been approved-ish.",
   "subhead": "Estimated wait time: three business emotions.",
   "bulletins": [
-    "Press 2 if you opened the fridge and forgot your entire personality.",
     "Thank you for your patience. We will not be using it responsibly.",
-    "Press 1 if you said 'you too' to a dentist.",
+    "Press 2 if you opened the fridge and forgot your entire personality.",
+    "Press 3 to escalate to the Department of Loud Sighs.",
     "All representatives are currently 'in another meeting' (emotionally)."
   ],
   "feature": {
-    "name": "Desk Weather",
-    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
+    "name": "Sigh Ledger",
+    "description": "All sighs must be logged. Please provide a receipt for each exhale."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-28T18:21:15.565Z"
+  "generatedAt": "2026-05-29T18:18:24.081Z"
 }
