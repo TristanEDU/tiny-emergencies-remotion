@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-29",
-  "seed": 223157056,
-  "mood": "hotline",
+  "dateISO": "2026-05-30",
+  "seed": 641278966,
+  "mood": "panic",
   "includeSound": true,
-  "headline": "Your hold music has been approved-ish.",
-  "subhead": "Estimated wait time: three business emotions.",
+  "headline": "Panic forecast updated.",
+  "subhead": "High probability of nodding before comprehension arrives.",
   "bulletins": [
-    "Thank you for your patience. We will not be using it responsibly.",
-    "Press 2 if you opened the fridge and forgot your entire personality.",
-    "Press 3 to escalate to the Department of Loud Sighs.",
-    "All representatives are currently 'in another meeting' (emotionally)."
+    "Tomorrow: chance of emotionally damp tabs.",
+    "9:00 AM: inbox drizzle with localized calendar turbulence.",
+    "4:59 PM: urgent sparkle advisory (avoid eye contact).",
+    "Recommended coping mechanism: open a blank spreadsheet for comfort."
   ],
   "feature": {
-    "name": "Sigh Ledger",
-    "description": "All sighs must be logged. Please provide a receipt for each exhale."
+    "name": "Mood Stamp",
+    "description": "A different stamp design appears today. It does nothing, but it judges you."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-29T18:18:24.081Z"
+  "generatedAt": "2026-05-30T17:41:27.268Z"
 }

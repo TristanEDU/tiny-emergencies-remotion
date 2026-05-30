@@ -1,8 +1,15 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-05-29T18:18:24.081Z",
+  "generatedAt": "2026-05-30T17:41:27.268Z",
   "entries": [
+    {
+      "dateISO": "2026-05-30",
+      "mp4": "out/daily/2026-05-30.mp4",
+      "headline": "Panic forecast updated.",
+      "mood": "panic",
+      "includeSound": true
+    },
     {
       "dateISO": "2026-05-29",
       "mp4": "out/daily/2026-05-29.mp4",
