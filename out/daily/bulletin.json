@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-30",
-  "seed": 641278966,
-  "mood": "panic",
-  "includeSound": true,
-  "headline": "Panic forecast updated.",
-  "subhead": "High probability of nodding before comprehension arrives.",
+  "dateISO": "2026-05-31",
+  "seed": 2528727519,
+  "mood": "snack",
+  "includeSound": false,
+  "headline": "Crunch support authorized.",
+  "subhead": "A granola bar is morally complex but permitted.",
   "bulletins": [
-    "Tomorrow: chance of emotionally damp tabs.",
-    "9:00 AM: inbox drizzle with localized calendar turbulence.",
-    "4:59 PM: urgent sparkle advisory (avoid eye contact).",
-    "Recommended coping mechanism: open a blank spreadsheet for comfort."
+    "New law: cold fries qualify as a salad after 9 PM.",
+    "Reminder: coffee counts as a meeting participant, not a breakfast.",
+    "Approved: three grapes and a large opinion.",
+    "Denied: 'just air' (not a snack; that's a threat)."
   ],
   "feature": {
     "name": "Mood Stamp",
     "description": "A different stamp design appears today. It does nothing, but it judges you."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-30T17:41:27.268Z"
+  "generatedAt": "2026-05-31T17:41:59.865Z"
 }
