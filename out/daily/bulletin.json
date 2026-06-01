@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-05-31",
-  "seed": 2528727519,
+  "dateISO": "2026-06-01",
+  "seed": 3197715536,
   "mood": "snack",
-  "includeSound": false,
+  "includeSound": true,
   "headline": "Crunch support authorized.",
-  "subhead": "A granola bar is morally complex but permitted.",
+  "subhead": "Hydration is a rumor; snacks are policy.",
   "bulletins": [
-    "New law: cold fries qualify as a salad after 9 PM.",
-    "Reminder: coffee counts as a meeting participant, not a breakfast.",
+    "Approved: emergency cereal eaten over the sink.",
     "Approved: three grapes and a large opinion.",
+    "New law: cold fries qualify as a salad after 9 PM.",
     "Denied: 'just air' (not a snack; that's a threat)."
   ],
   "feature": {
-    "name": "Mood Stamp",
-    "description": "A different stamp design appears today. It does nothing, but it judges you."
+    "name": "Emergency Horoscope",
+    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-05-31T17:41:59.865Z"
+  "generatedAt": "2026-06-01T19:12:31.898Z"
 }

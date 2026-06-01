@@ -1,8 +1,15 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-05-31T17:41:59.865Z",
+  "generatedAt": "2026-06-01T19:12:31.898Z",
   "entries": [
+    {
+      "dateISO": "2026-06-01",
+      "mp4": "out/daily/2026-06-01.mp4",
+      "headline": "Crunch support authorized.",
+      "mood": "snack",
+      "includeSound": true
+    },
     {
       "dateISO": "2026-05-31",
       "mp4": "out/daily/2026-05-31.mp4",
