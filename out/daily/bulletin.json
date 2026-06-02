@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-06-01",
-  "seed": 3197715536,
+  "dateISO": "2026-06-02",
+  "seed": 3153086648,
   "mood": "snack",
-  "includeSound": true,
-  "headline": "Crunch support authorized.",
-  "subhead": "Hydration is a rumor; snacks are policy.",
+  "includeSound": false,
+  "headline": "Snack protocol activated.",
+  "subhead": "Desk crackers remain legal in 43 states of mind.",
   "bulletins": [
+    "New law: cold fries qualify as a salad after 9 PM.",
     "Approved: emergency cereal eaten over the sink.",
     "Approved: three grapes and a large opinion.",
-    "New law: cold fries qualify as a salad after 9 PM.",
-    "Denied: 'just air' (not a snack; that's a threat)."
+    "If your brain is buffering, deploy chips immediately."
   ],
   "feature": {
     "name": "Emergency Horoscope",
     "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-06-01T19:12:31.898Z"
+  "generatedAt": "2026-06-02T18:33:11.411Z"
 }
