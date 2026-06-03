@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-06-02",
-  "seed": 3153086648,
-  "mood": "snack",
-  "includeSound": false,
-  "headline": "Snack protocol activated.",
-  "subhead": "Desk crackers remain legal in 43 states of mind.",
+  "dateISO": "2026-06-03",
+  "seed": 3040893855,
+  "mood": "paperwork",
+  "includeSound": true,
+  "headline": "A form has feelings now.",
+  "subhead": "A helpful reminder that 'quick question' is never quick.",
   "bulletins": [
-    "New law: cold fries qualify as a salad after 9 PM.",
-    "Approved: emergency cereal eaten over the sink.",
-    "Approved: three grapes and a large opinion.",
-    "If your brain is buffering, deploy chips immediately."
+    "Stapler has been promoted to manager (against everyone's wishes).",
+    "Printer status: haunted but cooperative if complimented.",
+    "Reminder: sighs must be filed in triplicate.",
+    "Approval stamp deployed with theatrical confidence."
   ],
   "feature": {
-    "name": "Emergency Horoscope",
-    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
+    "name": "Desk Weather",
+    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-06-02T18:33:11.411Z"
+  "generatedAt": "2026-06-03T18:37:23.322Z"
 }
