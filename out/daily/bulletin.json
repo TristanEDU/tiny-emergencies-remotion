@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-06-03",
-  "seed": 3040893855,
+  "dateISO": "2026-06-04",
+  "seed": 4276582284,
   "mood": "paperwork",
-  "includeSound": true,
+  "includeSound": false,
   "headline": "A form has feelings now.",
-  "subhead": "A helpful reminder that 'quick question' is never quick.",
+  "subhead": "Please initial the corner of your soul and proceed.",
   "bulletins": [
+    "Approval stamp deployed with theatrical confidence.",
     "Stapler has been promoted to manager (against everyone's wishes).",
-    "Printer status: haunted but cooperative if complimented.",
-    "Reminder: sighs must be filed in triplicate.",
-    "Approval stamp deployed with theatrical confidence."
+    "Your inbox is drizzling passive-aggression with a 60% chance of 'circling back.'",
+    "Printer status: haunted but cooperative if complimented."
   ],
   "feature": {
-    "name": "Desk Weather",
-    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
+    "name": "Sigh Ledger",
+    "description": "All sighs must be logged. Please provide a receipt for each exhale."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-06-03T18:37:23.322Z"
+  "generatedAt": "2026-06-04T18:04:21.417Z"
 }
