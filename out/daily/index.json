@@ -1,8 +1,15 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-06-04T18:04:21.417Z",
+  "generatedAt": "2026-06-05T18:00:03.310Z",
   "entries": [
+    {
+      "dateISO": "2026-06-05",
+      "mp4": "out/daily/2026-06-05.mp4",
+      "headline": "Today’s vibe: mostly awkward with a chance of spreadsheets.",
+      "mood": "panic",
+      "includeSound": false
+    },
     {
       "dateISO": "2026-06-04",
       "mp4": "out/daily/2026-06-04.mp4",
