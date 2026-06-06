@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-06-05",
-  "seed": 1460615794,
+  "dateISO": "2026-06-06",
+  "seed": 4027649197,
   "mood": "panic",
   "includeSound": false,
-  "headline": "Today’s vibe: mostly awkward with a chance of spreadsheets.",
-  "subhead": "High probability of nodding before comprehension arrives.",
+  "headline": "Panic forecast updated.",
+  "subhead": "Carry a small umbrella for emails that begin with 'hey'.",
   "bulletins": [
+    "9:00 AM: inbox drizzle with localized calendar turbulence.",
     "4:59 PM: urgent sparkle advisory (avoid eye contact).",
-    "Panic level may spike when someone says 'real quick.'",
     "1:00 PM: meeting thunder and a front of 'makes sense.'",
     "Tomorrow: chance of emotionally damp tabs."
   ],
   "feature": {
-    "name": "Desk Weather",
-    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
+    "name": "Sigh Ledger",
+    "description": "All sighs must be logged. Please provide a receipt for each exhale."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-06-05T18:00:03.310Z"
+  "generatedAt": "2026-06-06T17:44:20.547Z"
 }
