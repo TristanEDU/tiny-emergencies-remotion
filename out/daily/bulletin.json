@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-06-06",
-  "seed": 4027649197,
-  "mood": "panic",
+  "dateISO": "2026-06-07",
+  "seed": 1435935728,
+  "mood": "snack",
   "includeSound": false,
-  "headline": "Panic forecast updated.",
-  "subhead": "Carry a small umbrella for emails that begin with 'hey'.",
+  "headline": "Crunch support authorized.",
+  "subhead": "Desk crackers remain legal in 43 states of mind.",
   "bulletins": [
-    "9:00 AM: inbox drizzle with localized calendar turbulence.",
-    "4:59 PM: urgent sparkle advisory (avoid eye contact).",
-    "1:00 PM: meeting thunder and a front of 'makes sense.'",
-    "Tomorrow: chance of emotionally damp tabs."
+    "Reminder: coffee counts as a meeting participant, not a breakfast.",
+    "Denied: 'just air' (not a snack; that's a threat).",
+    "New law: cold fries qualify as a salad after 9 PM.",
+    "Approved: emergency cereal eaten over the sink."
   ],
   "feature": {
-    "name": "Sigh Ledger",
-    "description": "All sighs must be logged. Please provide a receipt for each exhale."
+    "name": "Mood Stamp",
+    "description": "A different stamp design appears today. It does nothing, but it judges you."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-06-06T17:44:20.547Z"
+  "generatedAt": "2026-06-07T17:46:31.705Z"
 }
