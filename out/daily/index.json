@@ -1,8 +1,15 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-06-08T18:13:03.288Z",
+  "generatedAt": "2026-06-09T18:01:49.036Z",
   "entries": [
+    {
+      "dateISO": "2026-06-09",
+      "mp4": "out/daily/2026-06-09.mp4",
+      "headline": "Atmospheric conditions: quick questions approaching rapidly.",
+      "mood": "panic",
+      "includeSound": false
+    },
     {
       "dateISO": "2026-06-08",
       "mp4": "out/daily/2026-06-08.mp4",
