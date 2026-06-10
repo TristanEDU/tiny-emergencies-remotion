@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-06-09",
-  "seed": 2485414127,
-  "mood": "panic",
+  "dateISO": "2026-06-10",
+  "seed": 4044441383,
+  "mood": "hotline",
   "includeSound": false,
-  "headline": "Atmospheric conditions: quick questions approaching rapidly.",
-  "subhead": "High probability of nodding before comprehension arrives.",
+  "headline": "An operator is typing 'interesting' with intense concern.",
+  "subhead": "For faster service, pretend your Wi‑Fi is a metaphor.",
   "bulletins": [
-    "4:59 PM: urgent sparkle advisory (avoid eye contact).",
-    "Panic level may spike when someone says 'real quick.'",
-    "Tomorrow: chance of emotionally damp tabs.",
-    "1:00 PM: meeting thunder and a front of 'makes sense.'"
+    "Your issue has been placed in a velvet-lined shrug queue.",
+    "All representatives are currently 'in another meeting' (emotionally).",
+    "Thank you for your patience. We will not be using it responsibly.",
+    "Press 1 if you said 'you too' to a dentist."
   ],
   "feature": {
-    "name": "Desk Weather",
-    "description": "Your desk now has atmospheric conditions. Please dress accordingly (emotionally)."
+    "name": "Sigh Ledger",
+    "description": "All sighs must be logged. Please provide a receipt for each exhale."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-06-09T18:01:49.036Z"
+  "generatedAt": "2026-06-10T18:15:22.451Z"
 }
