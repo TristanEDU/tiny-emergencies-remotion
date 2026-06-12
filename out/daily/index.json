@@ -1,8 +1,15 @@
 {
   "timeZone": "America/Los_Angeles",
   "keepDays": 60,
-  "generatedAt": "2026-06-11T18:27:13.870Z",
+  "generatedAt": "2026-06-12T18:01:59.052Z",
   "entries": [
+    {
+      "dateISO": "2026-06-12",
+      "mp4": "out/daily/2026-06-12.mp4",
+      "headline": "Browser counseling session begins.",
+      "mood": "tabs",
+      "includeSound": true
+    },
     {
       "dateISO": "2026-06-11",
       "mp4": "out/daily/2026-06-11.mp4",

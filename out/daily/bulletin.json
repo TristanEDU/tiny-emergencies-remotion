@@ -1,20 +1,20 @@
 {
-  "dateISO": "2026-06-11",
-  "seed": 3374152798,
-  "mood": "hotline",
-  "includeSound": false,
-  "headline": "Your hold music has been approved-ish.",
-  "subhead": "For faster service, pretend your Wi‑Fi is a metaphor.",
+  "dateISO": "2026-06-12",
+  "seed": 3053787351,
+  "mood": "tabs",
+  "includeSound": true,
+  "headline": "Browser counseling session begins.",
+  "subhead": "Negotiations continue. Demands include benefits and closure.",
   "bulletins": [
-    "Press 2 if you opened the fridge and forgot your entire personality.",
-    "Thank you for your patience. We will not be using it responsibly.",
-    "Your issue has been placed in a velvet-lined shrug queue.",
-    "All representatives are currently 'in another meeting' (emotionally)."
+    "The loud one is hiding behind a 'todo' list from 2019.",
+    "Four are duplicate calendars and one is a prophecy.",
+    "Closing tabs may trigger an immediate identity shift.",
+    "One tab is just vibes (cannot be closed without consequences)."
   ],
   "feature": {
-    "name": "Policy of the Day",
-    "description": "A new policy clause has been issued and immediately ignored with confidence."
+    "name": "Emergency Horoscope",
+    "description": "The bureau forecasts your next tiny crisis with unsettling accuracy."
   },
   "timeZone": "America/Los_Angeles",
-  "generatedAt": "2026-06-11T18:27:13.870Z"
+  "generatedAt": "2026-06-12T18:01:59.052Z"
 }
